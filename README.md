@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Home</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<h1>Welcome to my website for CIS3830!</h1>
