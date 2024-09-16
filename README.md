@@ -1,3 +1,4 @@
+# Simon-Ybarra.github.io
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,4 +10,3 @@
 	<p>This website is currently hosting projects completed for class. I hope you like them!</p>
 </body>
 </html>
-# Simon-Ybarra.github.io
