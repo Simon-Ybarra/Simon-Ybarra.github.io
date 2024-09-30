@@ -26,5 +26,12 @@
 			<li>Website: <a href="https://pasadenatenantsunion.org/en/">PTU Home</a></li>
 		</ul>
 	</section>
+	<section>
+		<h2>Games</h2>
+		<ul class="gamelist">
+			<li><a href="/platformer/index.html">MelonJS Platformer Tutorial Project</a></li>
+			<li><a href="https://scratch.mit.edu/projects/1072919068">Scratch Pacman Project</a></li>
+		</ul>
+	</section>
 </body>
 </html>
