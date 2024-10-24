@@ -1,7 +1,7 @@
 var resources = [{
-	name: "levelSprites",
-	type: "image",
-	src: "levelSprites.png"
+	name: "levelsprites",
+	type: "tsx",
+	src: "levelSprites.tsx"
 },
 {
 	name: "level1",
