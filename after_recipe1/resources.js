@@ -1,7 +1,7 @@
 var resources = [{
 	name: "levelsprites",
 	type: "tsx",
-	src: "levelSprites.tsx"
+	src: "levelsprites.tsx"
 },
 {
 	name: "level1",
