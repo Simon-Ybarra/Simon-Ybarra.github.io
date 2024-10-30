@@ -2,7 +2,9 @@ var PlayScreen = me.ScreenObject.extend({
   onResetEvent: function() {
     me.levelDirector.loadLevel("level1");
     me.input.bindKey(me.input.KEY.LEFT, "left");
+    me.input.bindKey(me.input.KEY.A, "left");
     me.input.bindKey(me.input.KEY.RIGHT, "right");
+    me.input.bindKey(me.input.KEY.D, "right");
   }
 });
 var TitleScreen = me.ScreenObject.extend({
@@ -10,6 +12,7 @@ var TitleScreen = me.ScreenObject.extend({
     this.parent(true);
     me.input.bindKey(me.input.KEY.SPACE, "jump", true);
     me.input.bindKey(me.input.KEY.UP, "jump", true);
+    me.input.bindKey(me.input.KEY.W, "jump", true);
   },
   onResetEvent: function() {
     if (this.title == null) {
