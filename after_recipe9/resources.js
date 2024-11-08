@@ -3,6 +3,11 @@ var resources = [{
   type: "image",
   src: "levelSprites.png"
 }, 
+                 {
+                   name: "tileset",
+                   type: "tsx",
+                   src: "tileset.tsx"
+                 },
 {
   name: "level1",
   type: "tmx",
