@@ -1,3 +1,5 @@
+import * as me from 'melonjs';
+
 var jsApp = {
   onload: function() {
     if (!me.video.init('jsapp', 320, 240, true, 2.0)) {
