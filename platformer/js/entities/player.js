@@ -103,7 +103,7 @@ class PlayerEntity extends me.Entity {
         } else {
             if (!this.body.falling && !this.body.jumping) {
                 // reset the multipleJump flag if on the ground
-                this.multipleJump = 0;//Resets to 0 to allow double jumps before landing
+                this.multipleJump = 1;
             }
             else if (this.body.falling && this.multipleJump < 2) {
                 // reset the multipleJump flag if falling
