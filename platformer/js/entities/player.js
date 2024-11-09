@@ -95,7 +95,7 @@ class PlayerEntity extends me.Entity {
             //this.body.jumping = true;
             if (this.multipleJump < 2) {
                 // easy "math" for double jump
-                this.body.jumping = true;//Moved jumping declaration into if statement to test reset
+                this.body.jumping = true;//Moved jumping declaration into if statement to allow reset on the ground
                 this.body.force.y = -this.body.maxVel.y * this.multipleJump++;
                 me.audio.stop("jump");
                 me.audio.play("jump", false);
@@ -103,7 +103,7 @@ class PlayerEntity extends me.Entity {
         } else {
             if (!this.body.falling && !this.body.jumping) {
                 // reset the multipleJump flag if on the ground
-                this.multipleJump = 1;
+                this.multipleJump = 0;//Resets to 0 to allow double jumps before landing
             }
             else if (this.body.falling && this.multipleJump < 2) {
                 // reset the multipleJump flag if falling
