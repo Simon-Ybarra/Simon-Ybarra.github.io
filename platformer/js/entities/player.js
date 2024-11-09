@@ -95,7 +95,7 @@ class PlayerEntity extends me.Entity {
             this.body.jumping = true;
             if (this.multipleJump <= 2) {
                 // easy "math" for double jump
-                //this.body.force.y = -this.body.maxVel.y * this.multipleJump++;
+                this.body.force.y = -this.body.maxVel.y;// * this.multipleJump++;
                 me.audio.stop("jump");
                 me.audio.play("jump", false);
             }
