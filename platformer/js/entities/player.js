@@ -93,13 +93,13 @@ class PlayerEntity extends me.Entity {
         if (me.input.isKeyPressed("jump")) {
             this.renderable.setCurrentAnimation("jump");
             this.body.jumping = true;
-            if (this.multipleJump <= 2) {
+            if (this.multipleJump < 2) {
                 // easy "math" for double jump
                 this.body.force.y = -this.body.maxVel.y * this.multipleJump++;
                 me.audio.stop("jump");
                 me.audio.play("jump", false);
             }
-        }/* else {
+        } else {
             if (!this.body.falling && !this.body.jumping) {
                 // reset the multipleJump flag if on the ground
                 this.multipleJump = 1;
@@ -108,7 +108,8 @@ class PlayerEntity extends me.Entity {
                 // reset the multipleJump flag if falling
                 this.multipleJump = 2;
             }
-        }*/
+        }
+        //Modified multipleJump check to turn off infinite jumps.
 
 
         if (this.body.force.x === 0 && this.body.force.y === 0) {
