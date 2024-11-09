@@ -92,9 +92,10 @@ class PlayerEntity extends me.Entity {
 
         if (me.input.isKeyPressed("jump")) {
             this.renderable.setCurrentAnimation("jump");
-            this.body.jumping = true;
+            //this.body.jumping = true;
             if (this.multipleJump < 2) {
                 // easy "math" for double jump
+                this.body.jumping = true;//Moved jumping declaration into if statement to test reset
                 this.body.force.y = -this.body.maxVel.y * this.multipleJump++;
                 me.audio.stop("jump");
                 me.audio.play("jump", false);
