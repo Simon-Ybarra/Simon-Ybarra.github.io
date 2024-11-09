@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset name="tileset" tilewidth="70" tileheight="70" spacing="10" margin="5" tilecount="252" columns="18">
+<tileset version="1.10" tiledversion="1.11.0" name="tileset" tilewidth="70" tileheight="70" spacing="10" margin="5" tilecount="252" columns="18" tilerendersize="grid">
+ <grid orientation="orthogonal" width="32" height="32"/>
  <image source="../img/tileset.png" width="1440" height="1120"/>
  <tile id="195">
   <animation>

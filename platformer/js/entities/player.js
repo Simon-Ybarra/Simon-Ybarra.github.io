@@ -13,12 +13,12 @@ class PlayerEntity extends me.Entity {
         this.alwaysUpdate = true;
 
         // walking & jumping speed
-        this.body.setMaxVelocity(3, 15);
+        this.body.setMaxVelocity(5, 20);
         this.body.setFriction(0.4, 0);
 
         this.dying = false;
 
-        this.multipleJump = 1;
+        this.multipleJump = 0;
 
         // set the viewport to follow this renderable on both axis, and enable damping
         me.game.viewport.follow(this, me.game.viewport.AXIS.BOTH, 0.1);
