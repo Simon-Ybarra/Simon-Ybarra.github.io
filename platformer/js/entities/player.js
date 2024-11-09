@@ -18,7 +18,7 @@ class PlayerEntity extends me.Entity {
 
         this.dying = false;
 
-        this.multipleJump = 0;
+        this.multipleJump = 1;
 
         // set the viewport to follow this renderable on both axis, and enable damping
         me.game.viewport.follow(this, me.game.viewport.AXIS.BOTH, 0.1);
@@ -95,7 +95,7 @@ class PlayerEntity extends me.Entity {
             this.body.jumping = true;
             if (this.multipleJump <= 2) {
                 // easy "math" for double jump
-                this.body.force.y = -this.body.maxVel.y * this.multipleJump++;
+                //this.body.force.y = -this.body.maxVel.y * this.multipleJump++;
                 me.audio.stop("jump");
                 me.audio.play("jump", false);
             }
