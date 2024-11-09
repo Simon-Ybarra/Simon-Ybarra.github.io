@@ -120,6 +120,8 @@ class PlayerEntity extends me.Entity {
         // check if we fell into a hole
         if (!this.inViewport && (this.getBounds().top > me.video.renderer.height)) {
             // if yes reset the game
+            //reset score first
+            game.data.score = 0;
             me.game.world.removeChild(this);
             me.game.viewport.fadeIn("#fff", 150, function(){
                 me.audio.play("die", false);
@@ -211,6 +213,8 @@ class PlayerEntity extends me.Entity {
         var sprite = this.renderable;
 
         if (!sprite.isFlickering()) {
+            // lose some score
+            game.data.score -= 100;
 
             // tint to red and flicker
             sprite.tint.setColor(255, 192, 192);
