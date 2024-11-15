@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.27 61.71">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #231f20;
+      }
+
+      .cls-2 {
+        font-family: Mistral, Mistral;
+        font-size: 48px;
+      }
+
+      .cls-3 {
+        fill: #27aae1;
+      }
+
+      .cls-4 {
+        fill: #fff200;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer_1">
+    <g>
+      <circle class="cls-1" cx="30.63" cy="30.63" r="30.63"/>
+      <text class="cls-2" transform="translate(11.27 46.48)"><tspan class="cls-4" x="0" y="0">S</tspan><tspan class="cls-3" x="16.59" y="0">Y</tspan></text>
+    </g>
+  </g>
+</svg>
