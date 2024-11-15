@@ -22,7 +22,7 @@ var resources = [{
 },
 { name: "badguy",
   type: "image",
-  src: "badguy.png"},
+  src: "badGuy.png"},
   {
     name: "boots",
     type: "image",
