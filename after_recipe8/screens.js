@@ -1,8 +1,8 @@
 var PlayScreen = me.ScreenObject.extend({
   onResetEvent: function() {
     me.levelDirector.loadLevel("level1");
-    document.getElementById('game_state').innerHTML = "Collect all of the coins!";
-    document.getElementById('instructions').innerHTML = "Arrows to move and Space to jump.";
+    document.getElementById('game_state').innerHTML = "Collect all of the coins! Avoid the bad guy!";
+    document.getElementById('instructions').innerHTML = "Arrows to move and Space to jump (WAD enabled).";
     me.input.bindKey(me.input.KEY.LEFT, "left");
     me.input.bindKey(me.input.KEY.A, "left");
     me.input.bindKey(me.input.KEY.RIGHT, "right");
