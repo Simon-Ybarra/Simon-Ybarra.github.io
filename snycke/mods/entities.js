@@ -1,5 +1,5 @@
 import * as me from 'melonjs';
-var PlayerEntity = me.ObjectEntity.extend({
+var PlayerEntity = me.Entity.extend({
   init: function(x, y, settings) {
     this.parent(x, y, settings);
     me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
@@ -30,7 +30,7 @@ var PlayerEntity = me.ObjectEntity.extend({
     document.getElementById('instructions').innerHTML = "";
   }
 });
-var CoinEntity = me.CollectableEntity.extend({
+var CoinEntity = me.Collectable.extend({
   init: function(x, y, settings) {
     this.parent(x, y, settings);
   },
@@ -43,7 +43,7 @@ var CoinEntity = me.CollectableEntity.extend({
     }
   }
 });
-var boxEntity = me.CollectableEntity.extend({
+var BoxEntity = me.Collectable.extend({
   init: function(x, y, settings) {
     this.parent(x, y, settings);
   },
@@ -52,7 +52,7 @@ var boxEntity = me.CollectableEntity.extend({
     me.game.remove(this);
   }
 });
-var EnemyEntity = me.ObjectEntity.extend({
+var EnemyEntity = me.Entity.extend({
   init: function(x, y, settings) {
     settings.image = "badguy";
     settings.spritewidth = 16;
@@ -89,7 +89,7 @@ var EnemyEntity = me.ObjectEntity.extend({
     return false;
   }
 });
-var BootsEntity = me.CollectableEntity.extend({
+var BootsEntity = me.Collectable.extend({
   init: function(x, y, settings) {
     this.parent(x, y, settings);
   },
