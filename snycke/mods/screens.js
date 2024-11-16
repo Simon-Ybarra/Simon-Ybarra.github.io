@@ -1,4 +1,4 @@
-
+import * as me from 'melonjs';
 var PlayScreen = me.ScreenObject.extend({
   onDestroyEvent: function() {
     me.gamestat.reset("coins");
