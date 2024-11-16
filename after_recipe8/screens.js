@@ -16,7 +16,6 @@ var TitleScreen = me.ScreenObject.extend({
     me.input.bindKey(me.input.KEY.SPACE, "jump", true);
   },
   onResetEvent: function() {
-    document.getElementById('game_state').innerHTML = "";
     document.getElementById('instructions').innerHTML = "";
     if (this.title == null) {
       this.title = me.loader.getImage("titleScreen");
