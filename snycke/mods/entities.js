@@ -30,7 +30,7 @@ var PlayerEntity = me.Entity.extend({
     document.getElementById('instructions').innerHTML = "";
   }
 });
-var CoinEntity = me.CollectableEntity.extend({
+var CoinEntity = me.Collectable.extend({
   init: function(x, y, settings) {
     this.parent(x, y, settings);
   },
@@ -43,7 +43,7 @@ var CoinEntity = me.CollectableEntity.extend({
     }
   }
 });
-var boxEntity = me.CollectableEntity.extend({
+var BoxEntity = me.Collectable.extend({
   init: function(x, y, settings) {
     this.parent(x, y, settings);
   },
@@ -89,7 +89,7 @@ var EnemyEntity = me.Entity.extend({
     return false;
   }
 });
-var BootsEntity = me.CollectableEntity.extend({
+var BootsEntity = me.Collectable.extend({
   init: function(x, y, settings) {
     this.parent(x, y, settings);
   },
