@@ -15,11 +15,11 @@
   </script>
 <div id="wrapper" style="width: 640px; text-align: center; margin-left:auto; margin-right:auto;">
     <div id="jsapp">
-      <script type="text/javascript" src="./mods/melonjs.module.js"></script>
-      <script type="text/javascript" src="./mods/resources.js"></script>
-      <script type="text/javascript" src="./mods/screens.js"></script>
-      <script type="text/javascript" src="./mods/entities.js"></script>
-      <script type="text/javascript" src="./mods/main.js"></script>
+      <script type="module" src="./mods/melonjs.module.js"></script>
+      <script type="module" src="./mods/resources.js"></script>
+      <script type="module" src="./mods/screens.js"></script>
+      <script type="module" src="./mods/entities.js"></script>
+      <script type="module" src="./mods/main.js"></script>
     </div>
     <div id="info" style="text-align:left; margin-top:20px;">
       <div>
@@ -32,7 +32,7 @@
   </div>
   <script type="module">
       import { device, Container } from "melonjs";
-      import onload from "/mods/main.js";
+      import onload from "./mods/main.js";
 
       device.onReady(() => {
           device.pauseOnBlur = false;
