@@ -34,8 +34,12 @@ var CoinEntity = me.CollectableEntity.extend({
     this.parent(x, y, settings);
   },
   onCollision : function (res, obj) {
+    me.gamestat.updateValue("coins", 1);
     this.collidable = false;
     me.game.remove(this);
+    if(me.gamestat.getItemValue("coins") === me.gamestat.getItemValue("totalCoins")){
+      obj.youWin();
+    }
   }
 }); 
 var EnemyEntity = me.ObjectEntity.extend({
