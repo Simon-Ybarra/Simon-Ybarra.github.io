@@ -20,6 +20,13 @@ var PlayerEntity = me.ObjectEntity.extend({
   },
   gameOver: function() {
     me.state.change(me.state.MENU);
+    document.getElementById('game_state').innerHTML = "Game Over";
+    document.getElementById('instructions').innerHTML = "";
+  },
+  youWin: function() {
+    me.state.change(me.state.MENU);
+    document.getElementById('game_state').innerHTML = "You Win!";
+    document.getElementById('instructions').innerHTML = "";
   }
 });
 var CoinEntity = me.CollectableEntity.extend({
