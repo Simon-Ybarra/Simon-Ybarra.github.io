@@ -5,6 +5,9 @@ var PlayScreen = me.ScreenObject.extend({
     document.getElementById('instructions').innerHTML = "Arrows to move and Space to jump.";
     me.input.bindKey(me.input.KEY.LEFT, "left");
     me.input.bindKey(me.input.KEY.RIGHT, "right");
+  },
+  onDestroyEvent: function() {
+    me.gamestat.reset("coins");
   }
 });
 var TitleScreen = me.ScreenObject.extend({
