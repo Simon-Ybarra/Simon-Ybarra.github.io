@@ -2,7 +2,7 @@ import * as me from 'melonjs';
 
 import game from './game.js';
 import resources from './resources.js';
-import PlayerEntity from './player.js';
+import BunnyEntity from './player.js';
 //import { SlimeEnemyEntity, FlyEnemyEntity } from './entities/enemies.js';
 import CarrotEntity from './carrot.js';
 import PlayScreen from './screens.js';
@@ -39,7 +39,7 @@ export default function onload() {
         me.state.transition("fade", "#FFFFFF", 250);
 
         // register our objects entity in the object pool
-        me.pool.register("mainPlayer", PlayerEntity);
+        me.pool.register("mainPlayer", BunnyEntity);
 //        me.pool.register("SlimeEntity", SlimeEnemyEntity);
 //        me.pool.register("FlyEntity", FlyEnemyEntity);
         me.pool.register("CarrotEntity", CarrotEntity, true);

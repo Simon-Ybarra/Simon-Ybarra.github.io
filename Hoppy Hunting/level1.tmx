@@ -26,7 +26,7 @@
 </data>
  </layer>
  <objectgroup id="2" name="player">
-  <object id="1" name="player" x="54.9005" y="246.829"/>
+  <object id="1" name="Bunny" x="54.9005" y="246.829"/>
  </objectgroup>
  <layer id="3" name="collision" width="30" height="20" visible="0">
   <data encoding="csv">
