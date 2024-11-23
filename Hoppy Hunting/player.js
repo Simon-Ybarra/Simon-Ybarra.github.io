@@ -51,26 +51,23 @@ class BunnyEntity extends me.Entity {
         me.input.bindGamepad(0, {type:"axes", code: me.input.GAMEPAD.AXES.LX, threshold: -0.5}, me.input.KEY.LEFT);
         me.input.bindGamepad(0, {type:"axes", code: me.input.GAMEPAD.AXES.LX, threshold: 0.5}, me.input.KEY.RIGHT);
         me.input.bindGamepad(0, {type:"axes", code: me.input.GAMEPAD.AXES.LY, threshold: -0.5}, me.input.KEY.UP);
-/*
+
         // set a renderable
         this.renderable = game.texture.createAnimationFromName([
-            "walk0001.png", "walk0002.png", "walk0003.png",
-            "walk0004.png", "walk0005.png", "walk0006.png",
-            "walk0007.png", "walk0008.png", "walk0009.png",
-            "walk0010.png", "walk0011.png"
+            "bunny0001.png", "bunny0002.png", "bunny0003.png",
+            "bunny0004.png"
         ]);
 
-        // define a basic walking animatin
-        this.renderable.addAnimation("stand", [{ name: "walk0001.png", delay: 100 }]);
-        this.renderable.addAnimation("walk",  [{ name: "walk0001.png", delay: 100 }, { name: "walk0002.png", delay: 100 }, { name: "walk0003.png", delay: 100 }]);
-        this.renderable.addAnimation("jump",  [{ name: "walk0004.png", delay: 150 }, { name: "walk0005.png", delay: 150 }, { name: "walk0006.png", delay: 150 }, { name: "walk0002.png", delay: 150 }, { name: "walk0001.png", delay: 150 }]);
+        // define basic stationary and jumping animations
+        this.renderable.addAnimation("stand", [{ name: "bunny0001.png", delay: 100 }]);
+        this.renderable.addAnimation("jump",  [{ name: "bunny0001.png", delay: 150 }, { name: "bunny0002.png", delay: 150 }, { name: "bunny0003.png", delay: 150 }, { name: "bunny0004.png", delay: 150 }, { name: "bunny0001.png", delay: 150 }]);
 
         // set as default
-        this.renderable.setCurrentAnimation("walk");
+        this.renderable.setCurrentAnimation("stand");
 
         // set the renderable position to bottom center
         this.anchorPoint.set(0.5, 1.0);
-        */
+        
     }
 
     /**
@@ -99,6 +96,7 @@ class BunnyEntity extends me.Entity {
 */
         if (me.input.isKeyPressed("jump")) {
             if (!this.body.falling && !this.body.jumping) {
+                this.renderable.setCurrentAnimation("jump");
                 this.body.jumping = true;
                 this.body.force.y = -this.body.maxVel.y * 2;
                 this.body.force.x = -this.body.maxVel.x * 2;

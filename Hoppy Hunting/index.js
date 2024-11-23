@@ -46,11 +46,11 @@ export default function onload() {
 
         // load the texture atlas file
         // this will be used by renderable object later
-/*        game.texture = new me.TextureAtlas(
+        game.texture = new me.TextureAtlas(
             me.loader.getJSON("texture"),
             me.loader.getImage("texture")
         );
-*/
+
         // add some keyboard shortcuts
 /*        me.event.on(me.event.KEYDOWN, (action, keyCode ) => {
 
