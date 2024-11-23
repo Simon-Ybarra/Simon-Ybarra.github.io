@@ -1,13 +1,13 @@
 import * as me from 'melonjs';
 import game from './game.js';
 
-class PlayerEntity extends me.Entity {
+class BunnyEntity extends me.Entity {
     constructor(x, y, settings) {
         // call the constructor
         super(x, y , settings);
 
-        // set a "player object" type
-        this.body.collisionType = me.collision.types.PLAYER_OBJECT;
+        // set a "bunny object" type
+        this.body.collisionType = me.collision.types.BUNNY_OBJECT;
 
         // player can exit the viewport (jumping, falling into a hole, etc.)
         this.alwaysUpdate = true;
@@ -244,4 +244,4 @@ class PlayerEntity extends me.Entity {
     }*/
 };
 
-export default PlayerEntity;
+export default BunnyEntity;
