@@ -10,7 +10,7 @@ class PlayScreen extends me.Stage {
      */
     onResetEvent() {
       // load a level
-        me.level.load("map1");
+        me.level.load("level1");
 
         // reset the score
         game.data.carrots = 0;
