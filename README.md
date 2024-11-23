@@ -32,6 +32,7 @@
 			<li><a href="/platformer/index.html">MelonJS Platformer Tutorial Project</a></li>
 			<li><a href="https://scratch.mit.edu/projects/1072919068">Scratch Pacman Project</a></li>
 			<li><a href="/after_recipe8/index.html">Cookbook Platformer Tutorial Project</a></li>
+			<li><a href="/Hoppy Hunting/index.html">Hoppy Hunting, a basic platformer designed as a test.</a></li>
 		</ul>
 	</section>
 </body>
