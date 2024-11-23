@@ -1,0 +1,52 @@
+{"frames": [
+
+{
+	"filename": "Bunny0001.png",
+	"frame": {"x":0,"y":0,"w":15,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":16},
+	"sourceSize": {"w":15,"h":16}
+},
+{
+	"filename": "Bunny0002.png",
+	"frame": {"x":0,"y":16,"w":16,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
+	"sourceSize": {"w":16,"h":16}
+},
+{
+	"filename": "Bunny0003.png",
+	"frame": {"x":0,"y":32,"w":16,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
+	"sourceSize": {"w":16,"h":16}
+},
+{
+	"filename": "Bunny0004.png",
+	"frame": {"x":0,"y":48,"w":15,"h":9},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":9},
+	"sourceSize": {"w":15,"h":9}
+},
+{
+	"filename": "Carrot.png",
+	"frame": {"x":0,"y":57,"w":16,"h":9},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":9},
+	"sourceSize": {"w":16,"h":9}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "hoppypack.png",
+	"format": "RGBA8888",
+	"size": {"w":16,"h":66},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:31ef6d67f96172f24c9f0bfcc9dd5809:a2df753a5b7960e9c7d0076ba1e33ffa:b63755fc51b532e907a7f37254480eb0$"
+}
+}
