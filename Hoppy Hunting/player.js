@@ -19,22 +19,25 @@ class BunnyEntity extends me.Entity {
         this.dying = false;
 
 //        this.multipleJump = 1;// jump counter property
+        this.jumpX = 2;
+        this.jumpY = 2;
+        this.getReady = false;
 
         // set the viewport to follow this renderable on both axis, and enable damping
         me.game.viewport.follow(this, me.game.viewport.AXIS.BOTH, 0.1);
 
         // enable keyboard
-        me.input.bindKey(me.input.KEY.LEFT,  "left");
-        me.input.bindKey(me.input.KEY.RIGHT, "right");
-        me.input.bindKey(me.input.KEY.X,     "jump", true);
-        me.input.bindKey(me.input.KEY.UP,    "jump", true);
+        me.input.bindKey(me.input.KEY.LEFT,  "left", true);
+        me.input.bindKey(me.input.KEY.RIGHT, "right", true);
+        me.input.bindKey(me.input.KEY.X,     "down", true);
+        me.input.bindKey(me.input.KEY.UP,    "up", true);
         me.input.bindKey(me.input.KEY.SPACE, "jump", true);
-        me.input.bindKey(me.input.KEY.DOWN,  "down");
-
-        me.input.bindKey(me.input.KEY.A,     "left");
-        me.input.bindKey(me.input.KEY.D,     "right");
-        me.input.bindKey(me.input.KEY.W,     "jump", true);
-        me.input.bindKey(me.input.KEY.S,     "down");
+        me.input.bindKey(me.input.KEY.DOWN,  "down", true);
+        me.input.bindKey(me.input.KEY.Q, "ready", true);
+        me.input.bindKey(me.input.KEY.A,     "left", true);
+        me.input.bindKey(me.input.KEY.D,     "right", true);
+        me.input.bindKey(me.input.KEY.W,     "up", true);
+        me.input.bindKey(me.input.KEY.S,     "down", true);
 
         //me.input.registerPointerEvent("pointerdown", this, this.onCollision.bind(this));
         //me.input.bindPointer(me.input.pointer.RIGHT, me.input.KEY.LEFT);
@@ -61,6 +64,7 @@ class BunnyEntity extends me.Entity {
         // define basic stationary and jumping animations
         this.renderable.addAnimation("stand", [{ name: "Bunny0001.png", delay: 100 }]);
         this.renderable.addAnimation("jump",  [{ name: "Bunny0001.png", delay: 150 }, { name: "Bunny0002.png", delay: 200 }, { name: "Bunny0003.png", delay: 200 }, { name: "Bunny0004.png", delay: 200 }, { name: "Bunny0001.png", delay: 150 }]);
+        this.renderable.addAnimation("ready", [{ name: "Bunny0004.png", delay: 100 }]);
 
         // set as default
         this.renderable.setCurrentAnimation("stand");
@@ -72,36 +76,63 @@ class BunnyEntity extends me.Entity {
 
     /**
      ** update the force applied
+     Considerations:
+     1. Ready should activate the ready animation and repurpose left/right/up/down key presses
+     2. Jump bases itself on current jumpX/Y
+     3. Ready and jump do not do anything while jumping/falling
      */
     update(dt) {
-        if (me.input.isKeyPressed("left")){
-            this.renderable.flipX(true);
-        } else if (me.input.isKeyPressed("right")){
-            this.renderable.flipX(false);
-        }
-        /*)
-        if (me.input.isKeyPressed("left")){
-            if (this.body.vel.y === 0) {
-                this.renderable.setCurrentAnimation("walk");
-            }
-            this.body.force.x = -this.body.maxVel.x;
-            this.renderable.flipX(true);
-        } else if (me.input.isKeyPressed("right")) {
-            if (this.body.vel.y === 0) {
-                this.renderable.setCurrentAnimation("walk");
-            }
-            this.body.force.x = this.body.maxVel.x;
-            this.renderable.flipX(false);
-        }
-*/
         if (me.input.isKeyPressed("jump")) {
             if (!this.body.falling && !this.body.jumping) {
                 this.renderable.setCurrentAnimation("jump");
                 this.body.jumping = true;
-                this.body.force.y = -this.body.maxVel.y * 2;
+                this.body.force.y = -this.body.maxVel.y * this.jumpY;
                 if (this.renderable.isFlippedX) {
-                    this.body.force.x = -this.body.maxVel.x * 2;
-                } else this.body.force.x = this.body.maxVel.x * 2;
+                    this.body.force.x = -this.body.maxVel.x * this.jumpX;
+                } else this.body.force.x = this.body.maxVel.x * this.jumpX;
+                this.getReady = false;
+                this.jumpY = 2;
+                game.data.jumpHeight = 2;
+                this.jumpX = 2;
+                game.data.jumpDistance = 2;
+            }
+        }
+        if (me.input.isKeyPressed("left")){
+            if (!this.getReady) {
+                this.renderable.flipX(true);
+            } else if (this.renderable.isFlippedX) {
+                this.jumpX += 1;
+                game.data.jumpDistance += 1;
+            } else {
+                this.jumpX -= 1;
+                game.data.jumpDistance -= 1;
+            }
+        }
+        if (me.input.isKeyPressed("right")){
+            if (!this.getReady) {
+                this.renderable.flipX(false);
+            } else if (this.renderable.isFlippedX) {
+                this.jumpX -= 1;
+                game.data.jumpDistance -= 1;
+            } else {
+                this.jumpX += 1;
+                game.data.jumpDistance += 1;
+            }
+        }
+        if (me.input.isKeyPressed("ready")) {
+            if (!this.body.jumping && !this.body.falling) {
+                this.renderable.setCurrentAnimation("ready");
+                this.getReady = true;
+            }
+        }
+        if (this.getReady) {
+            if (me.input.isKeyPressed("up")) {
+                this.jumpY += 1;
+                game.data.jumpHeight += 1;
+            }
+            if (me.input.isKeyPressed("down")) {
+                this.jumpY -= 1;
+                game.data.jumpHeight -= 1;
             }
         }
             //this.renderable.setCurrentAnimation("jump");
