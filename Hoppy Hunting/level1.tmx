@@ -10,14 +10,14 @@
   <object id="1" name="mainPlayer" x="54.9005" y="235" width="16" height="16"/>
  </objectgroup>
  <objectgroup id="4" name="carrot">
-  <object id="2" name="CarrotEntity" x="263.344" y="247.275"/>
-  <object id="3" name="CarrotEntity" x="167.38" y="247.275"/>
-  <object id="4" name="CarrotEntity" x="39.7248" y="199.516"/>
-  <object id="5" name="CarrotEntity" x="135.689" y="152.204"/>
-  <object id="6" name="CarrotEntity" x="183.894" y="103.106"/>
-  <object id="7" name="CarrotEntity" x="103.106" y="54.4542"/>
-  <object id="8" name="CarrotEntity" x="38.8321" y="8.03422"/>
-  <object id="9" name="CarrotEntity" x="471.341" y="168.719"/>
+  <object id="2" name="CarrotEntity" x="258.434" y="243.039" width="16" height="9"/>
+  <object id="3" name="CarrotEntity" x="99.0887" y="52.0036" width="16" height="9"/>
+  <object id="4" name="CarrotEntity" x="39.7248" y="6.03" width="16" height="9"/>
+  <object id="5" name="CarrotEntity" x="134.796" y="148.861" width="16" height="9"/>
+  <object id="6" name="CarrotEntity" x="188.804" y="53.3426" width="16" height="9"/>
+  <object id="7" name="CarrotEntity" x="55.7932" y="196.62" width="16" height="9"/>
+  <object id="8" name="CarrotEntity" x="38.8321" y="6.03" width="16" height="9"/>
+  <object id="9" name="CarrotEntity" x="462.86" y="164.036" width="16" height="9"/>
  </objectgroup>
  <objectgroup id="5" name="Collision">
   <object id="11" x="0.892691" y="254.863" width="382.072" height="31.6905"/>
