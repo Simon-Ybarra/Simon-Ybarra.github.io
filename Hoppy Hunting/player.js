@@ -160,7 +160,7 @@ class BunnyEntity extends me.Entity {
         switch (other.body.collisionType) {
             case me.collision.types.WORLD_SHAPE:
                 // Simulate a platform object
-                /*if (other.type === "platform") {
+                if (other.type === "platform") {
                     if (this.body.falling &&
                         !me.input.isKeyPressed("down") &&
                         // Shortest overlap would move the player upward
@@ -185,7 +185,7 @@ class BunnyEntity extends me.Entity {
 
                     // Respond to the slope (it is solid)
                     return true;
-                }*/
+                }
                 return true;
                 break;
 
