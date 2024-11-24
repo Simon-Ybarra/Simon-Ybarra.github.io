@@ -6,8 +6,8 @@ class BunnyEntity extends me.Entity {
         // call the constructor
         super(x, y , settings);
 
-        // set a "bunny object" type
-        this.body.collisionType = me.collision.types.BUNNY_OBJECT;
+        // set a "player object" type
+        this.body.collisionType = me.collision.types.PLAYER_OBJECT;
 
         // player can exit the viewport (jumping, falling into a hole, etc.)
         this.alwaysUpdate = true;
@@ -99,7 +99,9 @@ class BunnyEntity extends me.Entity {
                 this.renderable.setCurrentAnimation("jump");
                 this.body.jumping = true;
                 this.body.force.y = -this.body.maxVel.y * 2;
-                this.body.force.x = -this.body.maxVel.x * 2;
+                if (this.renderable.flipX) {
+                    this.body.force.x = -this.body.maxVel.x * 2;
+                } else this.body.force.x = this.body.maxVel.x * 2;
             }
         }
             //this.renderable.setCurrentAnimation("jump");
@@ -154,7 +156,7 @@ class BunnyEntity extends me.Entity {
 
 
     /**
-     * colision handler
+     * collision handler
      */
     onCollision(response, other) {
         switch (other.body.collisionType) {
