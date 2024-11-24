@@ -11,7 +11,7 @@ class CarrotEntity extends me.Collectable {
             Object.assign({
                 image: game.texture,
                 region : "Carrot.png",
-                shapes :[new me.Ellipse(8, 8, 8, 8)] // coins are 35x35
+                shapes :[new me.Ellipse(4, 4, 8, 8)] // coins are 35x35
             })
         );
     }
