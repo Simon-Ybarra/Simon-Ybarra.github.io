@@ -11,14 +11,14 @@ class CarrotEntity extends me.Collectable {
             Object.assign({
                 image: game.texture,
                 region : "Carrot.png",
-                shapes :[new me.Ellipse(x, y, 16, 9)] // carrots are 16x9.
+                shapes :[new me.Rect(x, y, 16, 9)] // carrots are 16x9.
             })
         );
     }
 
     // add a onResetEvent to enable object recycling
     onResetEvent(x, y, settings) {
-        this.shift(x, y);
+        //this.shift(x, y);
         // only check for collision against player
         this.body.setCollisionMask(me.collision.types.PLAYER_OBJECT);
     }
