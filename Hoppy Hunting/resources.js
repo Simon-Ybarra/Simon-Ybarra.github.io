@@ -14,8 +14,8 @@ var resources = [
     /* Tilesets.
      */
     { name: "MapTiles",         type: "tsx",    src: "MapTiles.tsx" },
-    { name: "Bunny",         type: "tsx",    src: "Bunny.tsx" },
-    { name: "Carrot",         type: "tsx",    src: "Carrot.tsx" },
+    //{ name: "Bunny",         type: "tsx",    src: "Bunny.tsx" },
+    //{ name: "Carrot",         type: "tsx",    src: "Carrot.tsx" },
 
 
     /* Background music.

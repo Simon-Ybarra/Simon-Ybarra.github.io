@@ -54,13 +54,13 @@ class BunnyEntity extends me.Entity {
 
         // set a renderable
         this.renderable = game.texture.createAnimationFromName([
-            "bunny0001.png", "bunny0002.png", "bunny0003.png",
-            "bunny0004.png"
+            "Bunny0001.png", "Bunny0002.png", "Bunny0003.png",
+            "Bunny0004.png"
         ]);
 
         // define basic stationary and jumping animations
-        this.renderable.addAnimation("stand", [{ name: "bunny0001.png", delay: 100 }]);
-        this.renderable.addAnimation("jump",  [{ name: "bunny0001.png", delay: 150 }, { name: "bunny0002.png", delay: 150 }, { name: "bunny0003.png", delay: 150 }, { name: "bunny0004.png", delay: 150 }, { name: "bunny0001.png", delay: 150 }]);
+        this.renderable.addAnimation("stand", [{ name: "Bunny0001.png", delay: 100 }]);
+        this.renderable.addAnimation("jump",  [{ name: "Bunny0001.png", delay: 150 }, { name: "Bunny0002.png", delay: 150 }, { name: "Bunny0003.png", delay: 150 }, { name: "Bunny0004.png", delay: 150 }, { name: "Bunny0001.png", delay: 150 }]);
 
         // set as default
         this.renderable.setCurrentAnimation("stand");
