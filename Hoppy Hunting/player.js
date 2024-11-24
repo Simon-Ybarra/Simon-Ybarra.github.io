@@ -13,7 +13,7 @@ class BunnyEntity extends me.Entity {
         this.alwaysUpdate = true;
 
         // walking & jumping speed
-        this.body.setMaxVelocity(5, 10);
+        this.body.setMaxVelocity(8, 12);
         this.body.setFriction(0.4, 0);
 
         this.dying = false;
@@ -60,7 +60,7 @@ class BunnyEntity extends me.Entity {
 
         // define basic stationary and jumping animations
         this.renderable.addAnimation("stand", [{ name: "Bunny0001.png", delay: 100 }]);
-        this.renderable.addAnimation("jump",  [{ name: "Bunny0001.png", delay: 150 }, { name: "Bunny0002.png", delay: 150 }, { name: "Bunny0003.png", delay: 150 }, { name: "Bunny0004.png", delay: 150 }, { name: "Bunny0001.png", delay: 150 }]);
+        this.renderable.addAnimation("jump",  [{ name: "Bunny0001.png", delay: 150 }, { name: "Bunny0002.png", delay: 200 }, { name: "Bunny0003.png", delay: 200 }, { name: "Bunny0004.png", delay: 200 }, { name: "Bunny0001.png", delay: 150 }]);
 
         // set as default
         this.renderable.setCurrentAnimation("stand");
