@@ -152,6 +152,7 @@ class BunnyEntity extends me.Entity {
             return true;
         }
         return false;*/
+        return true;
     }
 
 
