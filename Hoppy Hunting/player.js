@@ -13,7 +13,7 @@ class BunnyEntity extends me.Entity {
         this.alwaysUpdate = true;
 
         // walking & jumping speed
-        this.body.setMaxVelocity(5, 20);
+        this.body.setMaxVelocity(5, 10);
         this.body.setFriction(0.4, 0);
 
         this.dying = false;
@@ -99,7 +99,7 @@ class BunnyEntity extends me.Entity {
                 this.renderable.setCurrentAnimation("jump");
                 this.body.jumping = true;
                 this.body.force.y = -this.body.maxVel.y * 2;
-                if (this.renderable.flipX) {
+                if (this.renderable.isFlippedX) {
                     this.body.force.x = -this.body.maxVel.x * 2;
                 } else this.body.force.x = this.body.maxVel.x * 2;
             }
