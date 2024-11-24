@@ -8,7 +8,9 @@ var game = {
      */
     data : {
         // collected carrots!
-        carrots : 0
+        carrots : 0,
+        jumpHeight : 2,
+        jumpDistance : 2
     },
 
     // a reference to the texture atlas
