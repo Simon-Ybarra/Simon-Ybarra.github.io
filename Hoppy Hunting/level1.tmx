@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#88bad0" nextlayerid="5" nextobjectid="10">
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#88bad0" nextlayerid="6" nextobjectid="32">
  <tileset firstgid="1" source="../MapTiles.tsx"/>
  <layer id="1" name="foreground" width="30" height="20">
   <data encoding="csv">
@@ -26,40 +26,39 @@
 </data>
  </layer>
  <objectgroup id="2" name="player">
-  <object id="1" name="Bunny" x="54.9005" y="246.829"/>
+  <object id="1" name="mainPlayer" x="54.9005" y="246.829"/>
  </objectgroup>
- <layer id="3" name="collision" width="30" height="20" visible="0">
-  <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,5,5,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,5,5,5,5,0,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,5,5,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,5,5,5,5,0,0,0,0,0,5,0,5,5,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,5,0,0,5,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,5,0,0,0,5,5,0,0,0,0,0,0,
-0,0,0,0,0,0,0,5,5,5,5,0,0,0,0,0,0,0,5,5,0,5,5,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,5,5,0,0,0,0,0,0,0,5,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,5,5,
-0,0,5,5,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,5,0,0,0,0,0,5,5,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,5,5,0,0,0,0,0,5,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,5,0,0,0,0,0,5,0,0,
-5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,5,5,5,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</data>
- </layer>
  <objectgroup id="4" name="carrot">
-  <object id="2" name="carrot" x="263.344" y="247.275"/>
-  <object id="3" name="carrot" x="167.38" y="247.275"/>
-  <object id="4" name="carrot" x="39.7248" y="199.516"/>
-  <object id="5" name="carrot" x="135.689" y="152.204"/>
-  <object id="6" name="carrot" x="183.894" y="103.106"/>
-  <object id="7" name="carrot" x="103.106" y="54.4542"/>
-  <object id="8" name="carrot" x="38.8321" y="8.03422"/>
-  <object id="9" name="carrot" x="471.341" y="168.719"/>
+  <object id="2" name="CarrotEntity" x="263.344" y="247.275"/>
+  <object id="3" name="CarrotEntity" x="167.38" y="247.275"/>
+  <object id="4" name="CarrotEntity" x="39.7248" y="199.516"/>
+  <object id="5" name="CarrotEntity" x="135.689" y="152.204"/>
+  <object id="6" name="CarrotEntity" x="183.894" y="103.106"/>
+  <object id="7" name="CarrotEntity" x="103.106" y="54.4542"/>
+  <object id="8" name="CarrotEntity" x="38.8321" y="8.03422"/>
+  <object id="9" name="CarrotEntity" x="471.341" y="168.719"/>
+ </objectgroup>
+ <objectgroup id="5" name="collision">
+  <object id="11" x="0.892691" y="254.863" width="382.072" height="31.6905"/>
+  <object id="12" x="32.1369" y="207.997" width="62.9347" height="16.0684"/>
+  <object id="13" x="112.479" y="159.345" width="62.4884" height="15.6221"/>
+  <object id="14" x="160.684" y="110.694" width="63.3811" height="17.4075"/>
+  <object id="15" x="177.199" y="65.1664" width="30.3515" height="12.944"/>
+  <object id="16" x="95.5179" y="63.3811" width="64.7201" height="16.5148"/>
+  <object id="17" x="30.7978" y="15.1757" width="65.6128" height="16.9611"/>
+  <object id="18" x="238.795" y="143.723" width="17.8538" height="16.5148"/>
+  <object id="19" x="288.339" y="127.655" width="79.8959" height="48.6517"/>
+  <object id="20" x="305.3" y="175.86" width="45.9736" height="16.0684"/>
+  <object id="21" x="320.476" y="191.482" width="14.2831" height="63.3811"/>
+  <object id="22" x="336.098" y="208.89" width="15.6221" height="45.9736"/>
+  <object id="23" x="303.069" y="223.619" width="17.8538" height="31.2442"/>
+  <object id="24" x="369.574" y="142.831" width="15.1757" height="17.4075"/>
+  <object id="25" x="304.408" y="95.9643" width="46.8663" height="30.7978"/>
+  <object id="26" x="351.274" y="111.14" width="16.5148" height="15.6221"/>
+  <object id="27" x="319.137" y="78.5568" width="16.5148" height="17.8538"/>
+  <object id="28" x="432.062" y="207.551" width="46.4199" height="46.8663"/>
+  <object id="29" x="446.792" y="190.143" width="32.5832" height="17.8538"/>
+  <object id="30" x="463.307" y="175.414" width="17.4075" height="15.1757"/>
+  <object id="31" x="351.72" y="286.554" width="15.6221" height="33.9223"/>
  </objectgroup>
 </map>
