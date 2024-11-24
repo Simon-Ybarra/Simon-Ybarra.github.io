@@ -21,7 +21,7 @@ export default function onload() {
     }
 
     // register the debug plugin
-    me.plugin.register(DebugPanelPlugin,  "debugPanel");
+    //me.plugin.register(DebugPanelPlugin,  "debugPanel");
 
     // initialize the "sound engine"
  //   me.audio.init("mp3,ogg");
