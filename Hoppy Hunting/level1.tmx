@@ -7,7 +7,7 @@
   </data>
  </layer>
  <objectgroup id="2" name="player">
-  <object id="1" name="mainPlayer" x="54.9005" y="246.829"/>
+  <object id="1" name="mainPlayer" x="54.9005" y="235" width="16" height="16"/>
  </objectgroup>
  <objectgroup id="4" name="carrot">
   <object id="2" name="CarrotEntity" x="263.344" y="247.275"/>
@@ -19,7 +19,7 @@
   <object id="8" name="CarrotEntity" x="38.8321" y="8.03422"/>
   <object id="9" name="CarrotEntity" x="471.341" y="168.719"/>
  </objectgroup>
- <objectgroup id="5" name="collision">
+ <objectgroup id="5" name="Collision">
   <object id="11" x="0.892691" y="254.863" width="382.072" height="31.6905"/>
   <object id="12" x="32.1369" y="207.997" width="62.9347" height="16.0684"/>
   <object id="13" x="112.479" y="159.345" width="62.4884" height="15.6221"/>
